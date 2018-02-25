@@ -1,5 +1,11 @@
 # CharFunk - a Unicode character utility for JavaScript
 
+## Fork
+
+Forked from https://github.com/astrauka/CharFunk, merged the feature branch that was there into master. Edited the readme for readability.
+
+## Original readme: 
+
 CharFunk provides some of the functionality that Java's Character class does.  Many of these things would be difficult to do in JavaScript without very unweildy RegExps or using [XRegExp](http://xregexp.com/).  For example, it lets you test whether unicode characters in the Basic Multilingual Plane (0000 to FFFF) are letters or digits.
 
 Here are some of the things you can do with CharFunk:
