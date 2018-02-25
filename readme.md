@@ -1,4 +1,4 @@
-#CharFunk - a Unicode character utility for JavaScript
+# CharFunk - a Unicode character utility for JavaScript
 
 CharFunk provides some of the functionality that Java's Character class does.  Many of these things would be difficult to do in JavaScript without very unweildy RegExps or using [XRegExp](http://xregexp.com/).  For example, it lets you test whether unicode characters in the Basic Multilingual Plane (0000 to FFFF) are letters or digits.
 
@@ -50,10 +50,10 @@ Interested in contributing?  Check out [contributors.md](https://github.com/joel
 
 Finally, if you are working on anything involving Unicode, you might also find this helpful: [Unicodinator](http://unicodinator.com).
 
-##API
+## API
 
 
-###CharFunk.getDirectionality(ch)
+### CharFunk.getDirectionality(ch)
 Used to find the directionality, which is handled a bit differently than the other sets of properties since we need a value back, not just true/false.
 Returns one of the following:
 + `UNDEFINED`
@@ -84,7 +84,7 @@ Returns one of the following:
 `@returns {String}` a string representing the directionality, as defined above
 
 
-###CharFunk.getMatches(string,callback)
+### CharFunk.getMatches(string,callback)
 Returns an array of contiguous matching strings for which the callback returns true, similar to String.match().
 `CharFunk.getMatches("test this out",CharFunk.isLetter); // returns ["test","this","out"]`
 
@@ -96,7 +96,7 @@ Returns an array of contiguous matching strings for which the callback returns t
 `@returns {Array{String}}` 
 
 
-###CharFunk.isAllLettersOrDigits(string)
+### CharFunk.isAllLettersOrDigits(string)
 Returns true if the string argument is composed of all letters and digits
 
 
@@ -105,7 +105,7 @@ Returns true if the string argument is composed of all letters and digits
 `@returns {Boolean}` 
 
 
-###CharFunk.isDigit(ch)
+### CharFunk.isDigit(ch)
 Returns true if provided a length 1 string that is a digit
 
 
@@ -114,7 +114,7 @@ Returns true if provided a length 1 string that is a digit
 `@returns {Boolean}` 
 
 
-###CharFunk.isLetter(ch)
+### CharFunk.isLetter(ch)
 Returns true if provided a length 1 string that is a letter
 
 
@@ -123,7 +123,7 @@ Returns true if provided a length 1 string that is a letter
 `@returns {Boolean}` 
 
 
-###CharFunk.isLetterNumber(ch)
+### CharFunk.isLetterNumber(ch)
 Returns true if provided a length 1 string that is in the Unicode "Nl" category.
 Beware -- this is NOT the same thing as isLetterOrDigit()!
 
@@ -133,7 +133,7 @@ Beware -- this is NOT the same thing as isLetterOrDigit()!
 `@returns {Boolean}` 
 
 
-###CharFunk.isLetterOrDigit(ch)
+### CharFunk.isLetterOrDigit(ch)
 Returns true if provided a length 1 string that is a letter or a digit
 
 
@@ -142,7 +142,7 @@ Returns true if provided a length 1 string that is a letter or a digit
 `@returns {Boolean}` 
 
 
-###CharFunk.isLowerCase(ch)
+### CharFunk.isLowerCase(ch)
 Returns true if provided a length 1 string that is lowercase
 
 
@@ -151,7 +151,7 @@ Returns true if provided a length 1 string that is lowercase
 `@returns {Boolean}` 
 
 
-###CharFunk.isMirrored(ch)
+### CharFunk.isMirrored(ch)
 Returns true if provided a length 1 string that is a mirrored character
 
 
@@ -160,7 +160,7 @@ Returns true if provided a length 1 string that is a mirrored character
 `@returns {Boolean}` 
 
 
-###CharFunk.isUpperCase(ch)
+### CharFunk.isUpperCase(ch)
 Returns true if provided a length 1 string that is uppercase
 
 
@@ -169,7 +169,7 @@ Returns true if provided a length 1 string that is uppercase
 `@returns {Boolean}` 
 
 
-###CharFunk.isValidFirstForName(ch)
+### CharFunk.isValidFirstForName(ch)
 Returns true if provided a length 1 string that is a valid leading character for a JavaScript identifier
 
 
@@ -178,7 +178,7 @@ Returns true if provided a length 1 string that is a valid leading character for
 `@returns {Boolean}` 
 
 
-###CharFunk.isValidMidForName(ch)
+### CharFunk.isValidMidForName(ch)
 Returns true if provided a length 1 string that is a valid non-leading character for a ECMAScript identifier
 
 
@@ -187,7 +187,7 @@ Returns true if provided a length 1 string that is a valid non-leading character
 `@returns {Boolean}` 
 
 
-###CharFunk.isValidName(string,checkReserved)
+### CharFunk.isValidName(string,checkReserved)
 Returns true if the string is a valid ECMAScript identifier.
 This is a bit more restrictive than browsers tend to be, using the actual rules http://www.ecma-international.org/ecma-262/5.1/
 
@@ -199,7 +199,7 @@ This is a bit more restrictive than browsers tend to be, using the actual rules 
 `@returns {Boolean}` 
 
 
-###CharFunk.isWhitespace(ch)
+### CharFunk.isWhitespace(ch)
 Returns true if provided a length 1 string that is a whitespace character
 
 
@@ -208,7 +208,7 @@ Returns true if provided a length 1 string that is a whitespace character
 `@returns {Boolean}` 
 
 
-###CharFunk.indexOf(string,callback)
+### CharFunk.indexOf(string,callback)
 Returns the first index where the character causes a true return from the callback, or -1 if no match
 
 
@@ -219,7 +219,7 @@ Returns the first index where the character causes a true return from the callba
 `@returns {Number}` 
 
 
-###CharFunk.lastIndexOf(string,callback)
+### CharFunk.lastIndexOf(string,callback)
 Returns the last index where the character causes a true return from the callback, or -1 if no match
 
 
@@ -230,7 +230,7 @@ Returns the last index where the character causes a true return from the callbac
 `@returns {Number}` 
 
 
-###CharFunk.matchesAll(string,callback)
+### CharFunk.matchesAll(string,callback)
 Returns true if all characters in the provided string result in a true return from the callback.
 
 
@@ -241,7 +241,7 @@ Returns true if all characters in the provided string result in a true return fr
 `@returns {Boolean}` 
 
 
-###CharFunk.replaceMatches(string,callback,ch)
+### CharFunk.replaceMatches(string,callback,ch)
 Returns a new string with all matched characters replaced, similar to String.replace().
 If the callback returns a string, then that will be used as the replacement.
 Otherwise, if a ch argument is provided, then that will be used as a replacement.
@@ -257,7 +257,7 @@ If the callback does not return a string and the ch is not provided, then matche
 `@returns {String}` a new string
 
 
-###CharFunk.splitOnMatches(string,callback)
+### CharFunk.splitOnMatches(string,callback)
 Splits the string on all matches, similar to String.split().
 `CharFunk.splitOnMatches("test this out",CharFunk.isWhitespace); // returns ["test","this","out"]`
 
